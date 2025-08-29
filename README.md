@@ -4,127 +4,110 @@ A modern web app that streamlines employee business trip ("mission") requests by
 
 
 
-# Features
-Digitize Requests: Employees submit missions via a simple form (destination, purpose, dates, budget, attachments).
+## Features
 
-Real-Time Tracking: Live status updates (Pending → Approved/Rejected requests).
+### Digitize Requests
+ Employees submit missions via a simple form (destination, purpose, dates, budget, attachments).
 
-Manager Dashboard: Review, approve/reject, and allocate budgets quickly.
+### Real-Time Tracking
+Live status updates (Pending → Approved/Rejected requests).
 
-Finance Visibility: Track departmental spending, validate expenses, and export reports.
+### Manager Dashboard
+Review, approve/reject, and allocate budgets quickly.
 
-Centralized Records: All requests, approvals, and expenses stored in one searchable database.
+### Finance Visibility
+Track departmental spending, validate expenses, and export reports.
 
-Analytics & Reporting: Automated insights (frequent destinations, top costs, approval timelines).
+### Centralized Records
+All requests, approvals, and expenses are stored in one searchable database.
 
+### Analytics & Reporting
+Automated insights (frequent destinations, top costs, approval timelines).
 
+## User Roles
 
-
-
-# User Roles
-
-Employee: Submit requests, track status, upload expenses.
+Employee: Submit requests, track status, and upload expenses.
 
 Manager: Approve/reject with notes, set budgets.
 
-Finance: Monitor spending, validate expenses, export reports.
+Finance: Monitor spending, validate expenses, and export reports.
 
 Admin: Configure workflows, roles, and policies.
 
 
-# Tech Stack
-Backend
-
-Node.js (Express) + TypeScript
-
-PostgreSQL (with Sequelize ORM)
-
-Redis (for caching/sessions)
-
-JWT + role-based access control
-
-Dev Tools
-
-Docker & Docker Compose
-
-Jest + NYC for testing/coverage
-
-ESLint + Prettier for code quality
+## Tech Stack
+-**Backend**: Node.js (Express) + TypeScript
+-**Database**: PostgreSQL (with Sequelize ORM)
+-**Redis**: for caching/sessions
+-**Authentication**: JWT + role-based access control
+-**Containerization**: Docker & Docker Compose
+-**Intergration Testing**: Jest + NYC for testing/coverage
+-**ESLint + Prettier for code quality**
 
 
 
-# Getting Started
+### Getting Started
 
-1. Clone the Repository
-
+## 1. Clone the Repository
+```bash
 git clone https://github.com/Solvit-Africa-Training-Center/MissionTrack-Backend.git
 
 cd SolvitAfrica-mission-management
-
-2. Run with Docker
+```
+## 2. Run with Docker
 Make sure you have Docker & Docker Compose installed.
-
+```bash
 npm run docker:build   # build all services
 
 npm run docker:up      # start app + db + redis
-
-To stop:
-npm run docker:stop
-
-# 3. Run Backend (without Docker)
+```
+## To stop
+```bash
+npm run docker: stop
+```
+## 3. Run Backend (without Docker)
+```bash
 cd backend
 npm install
 npm run dev
+```
 
-4. create your .env 
+## 4. Create your .env 
+```bash
+# example:
 
-example:
-
-Environment Configuration
+# Environment Configuration
 
 NODE_ENV=DEV
-
 PORT=5000
-
-Database Configuration (DEV)
-
+# Database Configuration (DEV)
 DEV_USERNAME=your_database_username
-
 DEV_DATABASE=your_database_name
-
 DEV_PASSWORD=your_database_password
-
 DEV_HOST=localhost
-
 DEV_PORT=5432
-
-Redis Configuration
+# Redis Configuration
 
 REDIS_HOST=your_redis_host
-
 REDIS_PORT=your_redis_port
-
 REDIS_PASSWORD=your_redis_password
-
 REDIS_DB=your_redis_database
 
-JWT Configuration
+# JWT Configuration
 
 JWT_SECRET=your-super-secret-jwt-key-change-in-production
 
 CLOUDINARY_API_KEY=your-cloudinary-api-key
-
 CLOUDINARY_API_SECRET=your-cloudinary-api-secret
-
 CLOUDINARY_CLOUD_NAME=your-cloudinary-api-name
+```
 
-
-
-# To Run migrations & seeders:
-
+## To Run migrations & seeders:
+```bash
 npm run db:migrate
 
 npm run db:seed
+```
 
 
 # Testing
